@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    background-color: #372775;
+    overflow: hidden;
+}
+
+header{
+    width: 100vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 1rem;
+}
+
+.navegationPage{
+    display: flex;
+    align-items: center;
+}
+
+.titleNavegation{
+    font-family: 'Averia Libre';
+    font-size: 4rem;
+    color: #fff;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+section {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+section article{
+    border-radius: 1rem;
+    background: #312464;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+section article h3{
+    font-family: 'Averia Libre';
+    font-size: 3rem;
+    color: #fff;
+    padding-top: 2rem;
+}
