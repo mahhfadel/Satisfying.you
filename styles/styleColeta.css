@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    background-color: #372775;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    padding-top: 1rem;
+}
+
+header a{
+    color: #3F92C5;
+    font-family: Averia Libre;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+h1{
+    color: #FFF;
+    font-family: Averia Libre;
+    font-size: 4.8rem;
+    margin-bottom: 10rem;
+}
+
+section{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h3{
+    color: #FFF;
+    font-family: Averia Libre;
+    font-size: 3.6rem;
+}
