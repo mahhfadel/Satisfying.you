@@ -18,8 +18,19 @@ body{
 header{
     width: 100vw;
     padding-left: 3rem;
-    padding-right: 3rem;
+    padding-right: 5rem;
     margin-top: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a{
+    color: #3F92C5;
+    font-family: Averia Libre;
+    font-size: 2rem;
+    text-decoration: underline;
 }
 
 .navegationPage{
