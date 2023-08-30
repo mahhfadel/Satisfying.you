@@ -1,0 +1,124 @@
+body {
+  background-color: #372775;
+  padding: 0px 24px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-family: Averia Libre;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 48px;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainContent {
+  width: 488px;
+  height: 382px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #737373;
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column;
+}
+.mainTitle {
+  color: #fff;
+  font-family: Averia Libre;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: center;
+  margin: 0px;
+}
+.mainTitleDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 63px;
+  margin-top: 33px;
+}
+.label {
+  color: #fff;
+  font-family: Averia Libre;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: flex-start;
+  font-size: 1.2em;
+}
+
+.input {
+  outline: 0;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  width: 424px;
+  height: 39px;
+  flex-shrink: 0;
+  background: #fff;
+  font-family: Averia Libre;
+  font-size: 18px;
+  margin-bottom: 7px;
+  padding-left: 11px;
+  color: #3f92c5;
+}
+.input::placeholder {
+  color: #3f92c5;
+  font-family: Averia Libre;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.spanSenhaNaoConfere {
+  color: #fd7979;
+  font-family: Averia Libre;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: self-start;
+  margin-bottom: 63px;
+  visibility: hidden;
+}
+.btn_criar {
+  width: 134px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #37bd6d;
+  background: #49b976;
+  color: #fff;
+  text-align: center;
+  font-family: Averia Libre;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 1.4em;
+  align-self: self-end;
+  cursor: pointer;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,115 @@
+body {
+  background-color: #372775;
+  padding: 0px 24px;
+}
+
+.d-flex {
+  display: flex;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  font-family: Averia Libre;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 48px;
+}
+.header {
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: space-between;
+}
+.headerButtons {
+}
+.sairHeader {
+  color: #3f92c5;
+  text-align: center;
+  font-family: Averia Libre;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.pesquisaHeader {
+  width: 154px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #37bd6d;
+  background: #49b976;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: Averia Libre;
+}
+.icon {
+  position: absolute;
+  padding: 8px;
+}
+.scrollmenu {
+  overflow: hidden;
+  display: flex;
+  
+}
+
+
+
+.input {
+  padding-left: 2em;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  width: 100%;
+  height: 36px;
+  background: #fff;
+  color: #8b8b8b;
+  font-family: Averia Libre;
+  font-size: 1.2em;
+  margin-bottom: 74px;
+}
+.card {
+  border-radius: 10px;
+  background: #fff;
+  width: 271px;
+  height: 238px;
+  flex-shrink: 0;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardTitle {
+  width: 263.956px;
+  height: 30.399px;
+  flex-shrink: 0;
+  margin: 0px;
+  color: #3f92c5;
+  text-align: center;
+  font-family: Averia Libre;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10.6px;
+}
+.cardDate {
+  margin: 0px;
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Averia Libre;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.cardImg {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 11px;
+}
