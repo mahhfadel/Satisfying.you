@@ -3,7 +3,7 @@
     <head>
         <title> Relatorio </title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../styles/styleAcoesPesquisa.css">
+        <link rel="stylesheet" href="../styles/styleRelatorio.css">
     </head>
 
     <body>
@@ -18,7 +18,37 @@
             <a href="../index.html">Sair</a> 
         </header>
         <section>
-            aa
+            <div class="grafico">
+                <img src="/assets/grafico.png" alt="grafico">
+            </div>
+            <div class="legenda">
+                <div class="list">
+                    <div class="box" id="excelente"></div>
+                    <h3>Excelente</h3>
+                </div>
+
+                <div class="list">
+                    <div class="box" id="bom"></div>
+                    <h3>Bom</h3>
+                </div>
+
+                <div class="list">
+                    <div class="box" id="neutro"></div>
+                    <h3>Neutro</h3>
+                </div>
+
+                <div class="list">
+                    <div class="box" id="ruim"></div>
+                    <h3>Ruim</h3>
+                </div>
+
+                <div class="list">
+                    <div class="box" id="pessimo"></div>
+                    <h3>Pessimo</h3>
+                </div>
+            </div>
         </section>
+
+        <script src="../scripts/scriptRelatorio.js"></script>
     </body>
 </html>

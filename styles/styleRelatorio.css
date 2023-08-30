@@ -10,6 +10,15 @@
 	box-sizing: border-box;
 }
 
+html{
+    /* Variaveis de cor */
+    --excelente: #F1CE7E;
+    --bom: #6994FE;
+    --neutro: #5FCDA4;
+    --ruim: #EA7288;
+    --pessimo: #53D8D8;
+}
+
 body{
     background-color: #372775;
     overflow: hidden;
@@ -44,4 +53,75 @@ header a{
     color: #fff;
     margin-left: 1rem;
     font-weight: 400;
+}
+
+section{
+    width: 100vw;
+    display: flex;
+
+    margin-top: 3rem;
+}
+
+section .grafico{
+    width: 55%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 3rem;
+}
+
+section .legenda{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 3rem;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.list h3{
+    font-family: 'Averia Libre';
+    font-size: 3.6rem;
+    color: #fff;
+    margin-left: 1.5rem;
+    font-weight: 400;
+}
+
+.list .box{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.1rem;
+    background-color: black;
+}
+
+#excelente{
+    background-color: var(--excelente);
+}
+
+#bom{
+    background-color: var(--bom);
+}
+
+#neutro{
+    background-color: var(--neutro);
+}
+
+#ruim{
+    background-color: var(--ruim);
+}
+
+#pessimo{
+    background-color: var(--pessimo);
 }
