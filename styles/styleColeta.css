@@ -61,10 +61,71 @@ article{
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 h3{
     color: #FFF;
     font-family: Averia Libre;
     font-size: 3.6rem;
+}
+
+/* modal agradecimento */
+.modalAgradecimento{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #372775;
+
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.modalAgradecimento.mostrar {
+    display: flex;
+}
+
+.modalAgradecimento header{
+    height: 25%;
+}
+
+.modalAgradecimento main{
+    height: 45%;
+}
+
+.modalAgradecimento h2{
+    font-family: Averia Libre;
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    line-height: 9rem;
+
+}
+
+.modalAgradecimento footer{
+    height: 30%;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-right: 5rem;
+}
+
+.modalAgradecimento footer h4{
+    font-family: Averia Libre;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #888888;
+    text-align: right;
+    line-height: 3rem;
+}
+
+.modalAgradecimento footer a{   
+    text-decoration: underline;
+    color: #6994FE;
 }
