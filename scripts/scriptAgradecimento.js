@@ -9,16 +9,26 @@ function iniciaModal(modalID) {
 
 
 const pessimo = document.getElementById('pessimo')
-pessimo.addEventListener('click', () => iniciaModal('modalAgradecimento'))
+pessimo.addEventListener('click', () => {
+    iniciaModal('modalAgradecimento')
+})
 
 const ruim = document.getElementById('ruim')
-ruim.addEventListener('click', () => iniciaModal('modalAgradecimento'))
+ruim.addEventListener('click', () => {
+    iniciaModal('modalAgradecimento')
+})
 
 const neutro = document.getElementById('neutro')
-neutro.addEventListener('click', () => iniciaModal('modalAgradecimento'))
+neutro.addEventListener('click', () => {
+    iniciaModal('modalAgradecimento')
+})
 
 const bom = document.getElementById('bom')
-bom.addEventListener('click', () => iniciaModal('modalAgradecimento'))
+bom.addEventListener('click', () => {
+    iniciaModal('modalAgradecimento')
+})
 
 const excelente = document.getElementById('excelente')
-excelente.addEventListener('click', () => iniciaModal('modalAgradecimento'))
+excelente.addEventListener('click', () => {
+    iniciaModal('modalAgradecimento')
+})
