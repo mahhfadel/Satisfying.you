@@ -2,26 +2,32 @@
 function iniciaModal(modalID) {
 	const modal = document.getElementById(modalID)
     modal.classList.add('mostrar');
-    timer()
+    timerCont()
     setTimeout(function(){
         modal.classList.remove('mostrar');
-        window.location.href = "../pages/pageColeta.html"
+        state = false
     }, 3000)
 }
 
-function timer() {
+var state
+
+function timerCont(state = true) {
     var timer = document.getElementById('timer')
     contador = 3
 
     timer.innerHTML = contador
 
-    if(contador > 0) {
-        setInterval(function(){
-            contador--
-            timer.innerHTML = contador
-            console.log(contador)
-        }, 1000)
-    }
+
+    let teste = setInterval(function(){
+        contador--
+        timer.innerHTML = contador
+        console.log(contador)
+
+        if(contador == 0){
+            clearInterval(teste)
+        }
+    }, 1000)
+
 }
 
 const pessimo = document.getElementById('pessimo')
