@@ -21,8 +21,7 @@ function timerCont(state = true) {
     let teste = setInterval(function(){
         contador--
         timer.innerHTML = contador
-        console.log(contador)
-
+        
         if(contador == 0){
             clearInterval(teste)
         }
