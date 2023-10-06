@@ -7,7 +7,7 @@ body {
   }
 
   .title {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     font-family: Averia Libre;
     font-size: 1.2em;
@@ -102,6 +102,11 @@ body {
     line-height: normal;
     font-size: 1.4em;
   }
+
+  .btn_criar a {
+    color: #fff;
+    text-decoration: none;
+  }
   .buttonCriar{
     height: 20vh;
     display: flex;
@@ -138,4 +143,8 @@ body {
   .form{
     display: flex;
     flex-direction: column;
+  }
+
+  .navegation_header{
+    text-decoration: none;
   }

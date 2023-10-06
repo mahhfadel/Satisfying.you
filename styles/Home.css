@@ -24,8 +24,6 @@ body {
   margin-bottom: 5%;
   justify-content: space-between;
 }
-.headerButtons {
-}
 .sairHeader {
   color: #3f92c5;
   text-align: center;
@@ -41,8 +39,14 @@ body {
   border-radius: 10px;
   border: 1px solid #37bd6d;
   background: #49b976;
+
+  margin-right: 1rem;
+}
+
+.pesquisaHeader a{
+  text-decoration: none;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: Averia Libre;
 }
 .icon {
@@ -70,13 +74,18 @@ body {
   font-size: 1.2em;
   margin-bottom: 74px;
 }
+
+.pesquisas_menu{
+  text-decoration: none;
+  margin-left: 5%;
+}
+
 .card {
   border-radius: 10px;
   background: #fff;
   width: 271px;
   height: 238px;
   flex-shrink: 0;
-  margin-left: 5%;
   display: flex;
   align-items: center;
   justify-content: center;

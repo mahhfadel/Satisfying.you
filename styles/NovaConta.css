@@ -26,6 +26,10 @@ body {
   justify-content: space-between;
 }
 
+.navegation_header{
+  text-decoration: none;
+}
+
 .main {
   display: flex;
   align-items: center;
@@ -109,6 +113,10 @@ body {
   line-height: normal;
   font-size: 1.4em;
   align-self: self-end;
+}
+.btn_criar a{
+  color: white;
+  text-decoration: none;
 }
 .form{
   display: flex;

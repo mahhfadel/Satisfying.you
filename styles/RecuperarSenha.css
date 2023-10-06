@@ -26,6 +26,10 @@ body {
   justify-content: space-between;
 }
 
+.navegation_header{
+  text-decoration: none;
+}
+
 .main {
   display: flex;
   align-items: center;
@@ -118,6 +122,12 @@ body {
   align-self: self-end;
   cursor: pointer;
 }
+
+.btn_criar a{
+  color: white;
+  text-decoration: none;
+}
+
 .form{
   display: flex;
   flex-direction: column;

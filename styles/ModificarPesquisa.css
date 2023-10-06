@@ -21,6 +21,10 @@ body {
     width: 95%;
   }
 
+  .navegation_header{
+    text-decoration: none;
+  }
+
   .header {
     display: flex;
     margin-bottom: 5%;
@@ -105,6 +109,12 @@ body {
     font-size: 1.4em;
     align-self: self-end;
   }
+
+  .btn_salvar a{
+    color: #fff;
+    text-decoration: none;
+  }
+
   .buttonSalvar{
     height: 20vh;
     display: flex;

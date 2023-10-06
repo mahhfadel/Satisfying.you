@@ -35,6 +35,10 @@ header{
     align-items: center;
 }
 
+.navegation_header{
+    text-decoration: none;
+  }
+
 header a{
     color: #3F92C5;
     font-family: Averia Libre;
