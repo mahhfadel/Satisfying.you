@@ -11,7 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <link rel="shortcut icon" href="/Satisfying.you/assets/smile.svg" type="image/x-icon" />
+
+    <title>Nova Pesquisa</title>
 </head>
 <body>
     <header class="header">
@@ -39,13 +41,14 @@
             <h2 class="mainTitle">Criar nova pesquisa de satisfação</h2>
             <form class="form">
               <label class="label">Nome da pesquisa</label>
-              <input class="input" type="text" placeholder="Carnaval 2022"/>
+              <input class="input" type="text" placeholder="Nome da pesquisa"/>
               <label class="label">Data</label>
-              <input class="input" type="text" placeholder="23/05/2023"/>
+              <input class="input" type="date"/>
               <label class="label">Imagem</label>
-              <input class="input" type="file" placeholder="Carnaval2022.png" name="arquivo" id="arquivo"/>
-              <div class="selecao">
-              <input class="semArquivo" type="text"></input>
+              <input class="input" type="file" name="arquivo" id="arquivo" tabindex="0" accept="image/*"/>
+                <div class="selecao">
+                <input class="semArquivo" placeholder="Selecione um arquivo" disabled>
+              </input>
               <label class="escolher" for="arquivo" type="file">Escolher arquivo</label>
               </div>
               <div class="buttonCriar">

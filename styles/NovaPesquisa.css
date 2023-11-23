@@ -140,6 +140,14 @@ body {
     font-size: 18px;
     color: #3f92c5;
   }
+  .semArquivo::placeholder {
+    color: #3f92c5;
+    font-family: Averia Libre;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .form{
     display: flex;
     flex-direction: column;
