@@ -41,30 +41,30 @@
             <h2 class="mainTitle">Criar nova pesquisa de satisfação</h2>
             <form class="form">
               <label class="label">Nome da pesquisa</label>
-              <input class="input" type="text" placeholder="Nome da pesquisa"/>
+              <input class="input" type="text" placeholder="Nome da pesquisa" id="name"/>
 
               <label class="label">Data</label>
-              <input class="input" type="date"/>
+              <input class="input" type="date" id="data"/>
 
               <label class="label">Imagem</label>
               <input class="input" type="file" name="arquivo" id="select-arquivo" tabindex="0" accept="image/*"/>
 
               <div class="selecao">
                 <input class="semArquivo" placeholder="Selecione um arquivo" disabled/>
-                <label class="escolher" for="select-arquivo" type="file">Escolher arquivo</label>
+                <label class="escolher" for="select-arquivo" type="file" tabindex="0">Escolher arquivo</label>
               </div>
 
               <span class="picture__image"></span>
              
               
               <div class="buttonCriar">
-              <button class="btn_criar"><a href="Home.html">Criar</a></button>
+              <button class="btn_criar">Criar</button>
               </div>
             </form>
 
         </div>
 
       </main>
-    <script src="../scripts/scriptPesquisa.js"></script>  
+    <script src="../scripts/scriptNovaPesquisa.js"></script>  
   </body>
 </html>
