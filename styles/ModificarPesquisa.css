@@ -28,10 +28,11 @@ body {
 
   .header {
     display: flex;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     justify-content: space-between;
+    align-items: center;
   }
-  .sair{
+  .sair a{
     color: #3f92c5;
   }
   .main {
@@ -40,8 +41,9 @@ body {
     justify-content: center;
   }
   .mainContent {
-    width: 488px;
-    height: 455px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
     flex-shrink: 0;
     border-radius: 15px;
     border: 1px solid #737373;
@@ -57,8 +59,7 @@ body {
     font-weight: 400;
     line-height: normal;
     align-self: center;
-    margin-bottom: 47px;
-    margin-top: 35px;
+    margin-bottom: 1.3rem;
   }
   .label {
     color: #fff;
@@ -67,21 +68,23 @@ body {
     font-weight: 400;
     line-height: normal;
     align-self: flex-start;
-    font-size: 1.2em;
+    font-size: 20px;
   }
   .input {
     outline: 0;
     box-shadow: 0 0 0 0;
     border: 0 none;
     width: 424px;
-    height: 39px;
+    height: 30px;
     flex-shrink: 0;
     background: #fff;
     font-family: Averia Libre;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 7px;
     padding-left: 11px;
     color: #3f92c5;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
   }
   .input::placeholder {
     color: #3f92c5;
@@ -117,16 +120,15 @@ body {
   }
 
   .buttonSalvar{
-    height: 20vh;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
   }
   .escolher{
     display: flex;
-    background-color: #737373;
+    background-color: #A4A4A4;
     color: white;
-    height: 42px;
+    height: 32px;
     width: 130px;
     align-items: center;
     justify-content: center;
@@ -142,20 +144,110 @@ body {
     box-shadow: 0 0 0 0;
     border: 0 none;
     width: 290px;
-    height: 39px;
+    height: 30px;
     flex-shrink: 0;
     background: #fff;
     font-family: Averia Libre;
-    font-size: 18px;
+    font-size: 14px;
     color: #3f92c5;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem
+  }
+  .semArquivo::placeholder {
+    color: #3f92c5;
+    font-family: Averia Libre;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
   .btnApagar{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: red;
+    color: #F57F7F;
+    margin-right: 2rem;
+    cursor: pointer;
   }
   .form{
     display: flex;
     flex-direction: column;
+  }
+
+  .picture__image{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0.1rem;
+    background-color: #ffffff;
+  }
+
+  .modalConfirm{
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .modalConfirm.mostrar{
+    display: flex;
+  }
+
+  .modalConfirm__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #2B1F5C;
+    width: 30%;
+    border-radius: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-bottom: 1.4rem;
+  }
+
+  .modalConfirm__title{
+    text-align: center;
+    font-family: Averia Libre;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+  }
+
+  .modalConfirm__buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .button--cancel{
+    width: 47%;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Averia Libre;
+    font-size: 1.5rem;
+    background: #FF8383;
+    padding: 0.8rem;
+    cursor: pointer;
+  }
+
+  .button--confirm{
+    width: 47%;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Averia Libre;
+    font-size: 1.5rem;
+    background: #3F92C5;
+    padding: 0.8rem;
+    cursor: pointer;
   }

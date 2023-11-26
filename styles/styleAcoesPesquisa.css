@@ -12,7 +12,7 @@
 
 body{
     background-color: #372775;
-    overflow: hidden;
+    overflow-x: hidden; 
 }
 
 header{
@@ -58,6 +58,7 @@ section {
     margin-top: 10%;
     padding-left: 2rem;
     padding-right: 2rem;
+    /* flex-wrap: wrap; */
 }
 
 
@@ -67,6 +68,7 @@ section a{
     width: 271px;
     height: 238px;
     text-decoration: none;
+    margin-bottom: 3rem;
 
     display: flex;
     justify-content: center;
@@ -85,4 +87,38 @@ section article h3{
     font-size: 3rem;
     color: #fff;
     padding-top: 2rem;
+}
+
+@media (max-width: 920px) {
+    .titleNavegation{
+        font-size: 3rem;
+    }
+
+    header{
+        padding-left: 2rem;
+        padding-right: 3.5rem;
+    }
+
+    header a{
+        font-size: 1.8rem;
+    }
+
+    section{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 460px) {
+    header{
+        padding-left: 2.5rem;
+        padding-right: 4rem;
+    }
+
+    .titleNavegation{
+        font-size: 2rem;
+    }
+
+    header a{
+        font-size: 1.6rem;
+    }
 }

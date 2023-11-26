@@ -21,7 +21,7 @@ html{
 
 body{
     background-color: #372775;
-    overflow: hidden;
+    overflow-x: hidden; 
 }
 
 header{
@@ -128,4 +128,62 @@ section .legenda{
 
 #pessimo{
     background-color: var(--pessimo);
+}
+
+@media (max-width: 920px) {
+    .titleNavegation{
+        font-size: 3rem;
+    }
+
+    header{
+        padding-left: 2rem;
+        padding-right: 3.5rem;
+    }
+
+    header a{
+        font-size: 1.8rem;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    section .grafico{
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .grafico img{
+        width: 80%;
+    }
+
+    section .legenda{
+        width: 100%;
+        justify-content: center; 
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        padding-left: 0;
+    }
+
+    .list{
+        margin-bottom: 1.5rem;
+        width: 70%;
+        /* justify-content: center; */
+    }
+}
+
+@media (max-width: 460px) {
+    header{
+        padding-left: 2.5rem;
+        padding-right: 4rem;
+    }
+
+    .titleNavegation{
+        font-size: 2rem;
+    }
+
+    header a{
+        font-size: 1.6rem;
+    }
 }
