@@ -84,7 +84,6 @@ function iniciaModal(modalContainerID) {
         //apagar
         modalContainer.addEventListener('click', (e) => {
 			if (
-				e.target.id == modalContainerID ||
 				e.target.className == 'button--confirm' ||
 				e.target.id === 'button--confirm'
 			) {
@@ -95,7 +94,6 @@ function iniciaModal(modalContainerID) {
 }
 
 const apagar = document.querySelector('.btnApagar')
-console.log(apagar)
 apagar.addEventListener('click', () => {
     iniciaModal('modalConfirm')
 })

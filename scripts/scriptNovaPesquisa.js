@@ -57,6 +57,16 @@ form.addEventListener('submit', function(e){
                 alert('Selecione uma imagem');
             } else{
                 e.preventDefault();
+                let pesquisaList = JSON.parse(localStorage.getItem('pesquisaList') || '[]')
+
+                pesquisaList.push({
+                    name: inputName.value,
+                    data: inputData.value,
+                    image: inputFile.value
+                })
+            
+                localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))
+
                 window.location.href = "../pages/Home.html";
             }
         }
