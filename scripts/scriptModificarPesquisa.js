@@ -12,7 +12,8 @@ const inputName = document.querySelector('#name');
 const inputData = document.querySelector('#data');
 //imput imagem
 const inputFile = document.querySelector('#select-arquivo');
-
+//parametro nome da pesquisa
+const params = new URLSearchParams(window.location.search);
 
 //insert image
 inputFile.addEventListener('change', function(e) { 
@@ -43,19 +44,19 @@ inputFile.addEventListener('change', function(e) {
 })
 
 // recuperar lista de pesquisa
-let pesquisaList = JSON.parse(localStorage.getItem('pesquisaList') || '[]')
-console.log(pesquisaList);
+const pesquisaList = Array.from(JSON.parse(localStorage.getItem("pesquisaList")));
 
 // buscar nome da pesquisa e inserir no input
 pesquisaList.forEach((item) => {
-    idName = form.value
-    console.log(item.name);
-    console.log('variavel: '    );
-    if(idName == item.name){
+    if(params.get('nome') == item.name){
         console.log('achou');
-        imputName.placeholder = item.name;
-        imputData.placeholder = item.data;
-        imputImage.placeholder = item.image;
+        inputName.value = item.name;
+        inputData.value = item.data;
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.classList.add('picture__image');
+        pictureImage.innerHTML = '';
+        pictureImage.appendChild(img);
     }
 })
 
