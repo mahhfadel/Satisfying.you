@@ -42,6 +42,23 @@ inputFile.addEventListener('change', function(e) {
     }
 })
 
+// recuperar lista de pesquisa
+let pesquisaList = JSON.parse(localStorage.getItem('pesquisaList') || '[]')
+console.log(pesquisaList);
+
+// buscar nome da pesquisa e inserir no input
+pesquisaList.forEach((item) => {
+    idName = form.value
+    console.log(item.name);
+    console.log('variavel: '    );
+    if(idName == item.name){
+        console.log('achou');
+        imputName.placeholder = item.name;
+        imputData.placeholder = item.data;
+        imputImage.placeholder = item.image;
+    }
+})
+
 
 // não enviar vazio
 form.addEventListener('submit', function(e){
@@ -58,6 +75,15 @@ form.addEventListener('submit', function(e){
                 alert('Selecione uma imagem');
             } else{
                 e.preventDefault();
+                
+                pesquisaList.push({
+                    name: inputName.value,
+                    data: inputData.value,
+                    image: inputFile.value
+                })
+            
+                localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))
+
                 window.location.href = "../pages/Home.html";
             }
         }
@@ -65,7 +91,6 @@ form.addEventListener('submit', function(e){
 })
 
 // modal apagar
-
 function iniciaModal(modalContainerID) {
 	const modalContainer = document.getElementById(modalContainerID)
 	if (modalContainer) {
