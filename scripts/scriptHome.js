@@ -1,5 +1,3 @@
-
-
 window.onload = function() {
     var main = document.querySelectorAll(".scrollmenu")[0];
     const storage = Array.from(JSON.parse(localStorage.getItem("pesquisaList")));
@@ -23,9 +21,6 @@ window.onload = function() {
     })
     
 };
-
-
-
 
 function cretaCard(nome,data,img){
     // titulo

@@ -8,21 +8,23 @@ body {
 }
 .title {
   color: #fff;
-  text-align: center;
   font-family: Averia Libre;
-  font-size: 1.2em;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  /* font-size: 3rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 48px;
+  align-content: center;
+
+}
+.title h1{
+  margin-left: 0.5rem;
 }
 .header {
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 1.2rem;
+  margin-top: 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 .sairHeader {
   color: #3f92c5;
@@ -34,7 +36,7 @@ body {
   text-decoration-line: underline;
 }
 .pesquisaHeader {
-  width: 154px;
+  /* width: 154px; */
   height: 40px;
   border-radius: 10px;
   border: 1px solid #37bd6d;
@@ -48,6 +50,7 @@ body {
   color: #fff;
   font-size: 1.4em;
   font-family: Averia Libre;
+  padding: 0 0.3rem;
 }
 .icon {
   position: absolute;
@@ -56,10 +59,7 @@ body {
 .scrollmenu {
   overflow: hidden;
   display: flex;
-  
 }
-
-
 
 .input {
   padding-left: 2em;
@@ -118,10 +118,75 @@ body {
 }
 .cardImg {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 11px;
+  width: 100%;
+  height: 60%;
+  /* padding-top: 1rem; */
+}
+
+.cardImg img {
+  width: 85%;
+  height: 100%;
+  border-radius: 2px;
 }
 .none{
   display: none;
+}
+
+@media (max-width: 590px){
+  .title h1{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 590px){
+  .title h1{
+    display: none;
+  }
+  
+  .pesquisaHeader a{
+    font-size: 1rem;
+    padding: 0 0.2rem;
+  }
+}
+
+@media (max-width: 677px){
+  .scrollmenu {
+    width: 100%;
+    /* background-color: red; */
+    /* overflow-x: hidden; */
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .pesquisas_menu{
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    width: 48%;
+  }
+
+  .card{
+    width: 100%;
+  }
+}
+
+@media (max-width: 677px){
+  .cardTitle{
+    font-size: 1.5rem;
+    margin-bottom: 0.01rem;
+  }
+}
+
+@media (max-width: 380px){
+  .cardTitle{
+    font-size: 1.3rem;
+  }
+
+  .cardDate{
+    font-size: 0.8rem;
+  }
 }
