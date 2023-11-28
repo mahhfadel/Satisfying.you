@@ -3,7 +3,7 @@
 //quadro imagem
 const pictureImage = document.querySelector(".picture__image");
 //epaço do nome da imagem
-const imputName = document.querySelector(".semArquivo");
+const imputNameImage = document.querySelector(".semArquivo");
 //formulario
 const form = document.querySelector('.form');
 //imput nome
@@ -12,24 +12,25 @@ const inputName = document.querySelector('#name');
 const inputData = document.querySelector('#data');
 //imput imagem
 const inputFile = document.querySelector('#select-arquivo');
-
+//parametro nome da pesquisa
+const params = new URLSearchParams(window.location.search);
 
 //insert image
 inputFile.addEventListener('change', function(e) { 
     const inputTarget = e.target;
     const file = inputTarget.files[0];
-    const name = inputTarget.files[0].name;
 
     if(file){
         const reader = new FileReader();
 
-        imputName.placeholder = name;
+        imputNameImage.placeholder = file.name;
 
         reader.addEventListener('load', function(e){
             const readerTarget = e.target;
 
             const img = document.createElement('img');
             img.src = readerTarget.result;
+            newImgToSave = readerTarget.result;
             img.classList.add('picture__image');
             pictureImage.innerHTML = '';
 
@@ -43,19 +44,23 @@ inputFile.addEventListener('change', function(e) {
 })
 
 // recuperar lista de pesquisa
-let pesquisaList = JSON.parse(localStorage.getItem('pesquisaList') || '[]')
-console.log(pesquisaList);
+const pesquisaList = Array.from(JSON.parse(localStorage.getItem("pesquisaList")));
 
 // buscar nome da pesquisa e inserir no input
 pesquisaList.forEach((item) => {
-    idName = form.value
-    console.log(item.name);
-    console.log('variavel: '    );
-    if(idName == item.name){
-        console.log('achou');
-        imputName.placeholder = item.name;
-        imputData.placeholder = item.data;
-        imputImage.placeholder = item.image;
+    if(params.get('nome') == item.name){
+        inputName.value = item.name;
+        inputData.value = item.data;
+        const img = document.createElement('img');
+        img.src = item.image;
+        imgToSave = item.image;
+        img.classList.add('picture__image');
+        pictureImage.innerHTML = '';
+        pictureImage.appendChild(img);
+
+        if(item.image !== ''){
+            imputNameImage.placeholder = 'Imagem de ' + item.name;
+        }
     }
 })
 
@@ -72,17 +77,30 @@ form.addEventListener('submit', function(e){
         } else{
             if(inputFile.value == ''){
                 e.preventDefault();
-                alert('Selecione uma imagem');
+
+                pesquisaList.forEach((item) => {
+                    if(params.get('nome') == item.name){
+                            item.name = inputName.value,
+                            item.data = inputData.value,
+                            item.image = imgToSave
+                    
+                        localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))
+                    }
+                })
+
+                window.location.href = "../pages/Home.html";
             } else{
                 e.preventDefault();
-                
-                pesquisaList.push({
-                    name: inputName.value,
-                    data: inputData.value,
-                    image: inputFile.value
+
+                pesquisaList.forEach((item) => {
+                    if(params.get('nome') == item.name){
+                            item.name = inputName.value,
+                            item.data = inputData.value,
+                            item.image = newImgToSave
+                    
+                        localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))
+                    }
                 })
-            
-                localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))
 
                 window.location.href = "../pages/Home.html";
             }
@@ -112,6 +130,15 @@ function iniciaModal(modalContainerID) {
 				e.target.className == 'button--confirm' ||
 				e.target.id === 'button--confirm'
 			) {
+                pesquisaList.forEach((item, index) => {
+                    if(params.get('nome') === item.name){
+                        pesquisaList.splice(index, 1);
+                    
+                        localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))
+                        return;
+                    }
+                })
+
 				window.location.href = "../pages/Home.html";
 			}
 		})
