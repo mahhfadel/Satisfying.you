@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../styles/Home.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,7 +10,11 @@
       rel="stylesheet"
     />
     <title>Home</title>
-    <link rel="shortcut icon" href="/Satisfying.you/assets/smile.svg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/Satisfying.you/assets/smile.svg"
+      type="image/x-icon"
+    />
     <script src="../scripts/scriptHome.js"></script>
   </head>
   <body>
@@ -31,8 +35,10 @@
         <h1 style="height: 48px">Satisfying.you</h1>
       </div>
       <div class="headerButtons">
-        <button class="pesquisaHeader"><a href="NovaPesquisa.html">Nova Pesquisa</a></button>
-        <a class="sairHeader"  onclick="sair()">Sair</a>
+        <button class="pesquisaHeader">
+          <a href="NovaPesquisa.html">Nova Pesquisa</a>
+        </button>
+        <a class="sairHeader" onclick="sair()">Sair</a>
       </div>
     </header>
 
@@ -46,53 +52,48 @@
       />
     </div>
 
-    <main class="scrollmenu">
-      
-
-    </main>
+    <main class="scrollmenu"></main>
   </body>
 </html>
 <script>
-cretaCard();
+  cretaCard();
 
-var dragMe = document.querySelectorAll(".scrollmenu")[0],
 
-  /* o x inicial do drag*/
-  dragOfX = 0
-
-/* ao segurar o elemento */
-function dragStart(e) {
   
-    /* define o x inicial do drag */
-    if(  dragOfX == 0)
-    dragOfX = e.pageX - dragMe.offsetLeft;
-    /* adiciona os eventos */
-    addEventListener("mousemove", dragMove);
-    addEventListener("mouseup", dragEnd);
-}
-    
-/* ao ser arrastado */
-function dragMove(e) {
-    /* atualiza a posição do elemento */
-    const cards = document.querySelectorAll(".card");
-    cards.forEach(function (ele) {
-      ele.style.cssText = "translate:"+(e.pageX - dragOfX)+"px;";
-    });
-    
-}
-    
-/* ao terminar o drag */
-function dragEnd() {
-    /* remove os eventos */
-    removeEventListener("mousemove", dragMove);
-    removeEventListener("mouseup", dragEnd);
-}
-    
-/* adiciona o evento que começa o drag */
-dragMe.addEventListener("mousedown", dragStart);
+    var dragMe = document.querySelectorAll(".scrollmenu")[0],
+      /* o x inicial do drag*/
+      dragOfX = 0;
 
+    /* ao segurar o elemento */
+    function dragStart(e) {
+      /* define o x inicial do drag */
+      if (dragOfX == 0) dragOfX = e.pageX - dragMe.offsetLeft;
+      /* adiciona os eventos */
+      addEventListener("mousemove", dragMove);
+      addEventListener("mouseup", dragEnd);
+    }
 
+    /* ao ser arrastado */
+    function dragMove(e) {
+   
+      /* atualiza a posição do elemento */
+      const cards = document.querySelectorAll(".card");
+      if( window.innerWidth>677){
+        cards.forEach(function (ele) {
+        ele.style.cssText = "translate:" + (e.pageX - dragOfX) + "px;";
+      });
+      }
+      
+    }
 
+    /* ao terminar o drag */
+    function dragEnd() {
+      /* remove os eventos */
+      removeEventListener("mousemove", dragMove);
+      removeEventListener("mouseup", dragEnd);
+    }
 
- 
+    /* adiciona o evento que começa o drag */
+    dragMe.addEventListener("mousedown", dragStart);
+  
 </script>
