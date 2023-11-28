@@ -7,12 +7,13 @@ window.onload = function() {
     //pegandop o usuartio logado
     const userLogin =JSON.parse(localStorage.getItem('userLogin'))
     //pegando as pesquisa somente do usuario
-    const minhasPesquisas = storage.map((pesquisa)=>{
+    const minhasPesquisasAll = storage.map((pesquisa)=>{
         if(pesquisa.userEmail === userLogin.email){
             return  pesquisa
         }
         
     })
+    let minhasPesquisas = minhasPesquisasAll.filter((item)=>{return item})
     //enviando para funçao qque cria o card e dando apeend (reenderizando) na tela home
     minhasPesquisas.map((item)=>{
         main.appendChild(cretaCard(item.name,item.data,item.image));
