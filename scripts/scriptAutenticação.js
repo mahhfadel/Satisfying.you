@@ -16,7 +16,6 @@ function autenticar() {
   if (usuarioAutenticado) {
     // Usuário autenticado com sucesso, realiza ação desejada (pode redirecionar para outra página, por exemplo)
     alert("Login bem-sucedido!");
-    // window.location.href = "PaginaProtegida.html";
   } else {
     event.preventDefault();
     emailSenhaErrado.style.visibility = "visible";
