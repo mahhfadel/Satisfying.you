@@ -2,7 +2,8 @@ function autenticar() {
   // Obtém os valores dos campos de entrada
   var emailDigitado = document.getElementById("emailInput").value;
   var senhaDigitada = document.getElementById("senhaInput").value;
-
+  
+  var emailSenhaErrado = document.getElementById("emailSenhaErrado");
   // Obtém os usuários cadastrados do Local Storage
   var usuariosCadastrados = JSON.parse(localStorage.getItem("usuarios")) || [];
 
@@ -18,7 +19,9 @@ function autenticar() {
     // window.location.href = "PaginaProtegida.html";
   } else {
     event.preventDefault();
-    // Exibe mensagem de erro ou realiza outra ação desejada
-    alert("Email ou senha incorretos. Tente novamente.");
+    emailSenhaErrado.style.visibility = "visible";
+    setTimeout(function(){
+      emailSenhaErrado.style.visibility = "hidden";
+    }, 3000);
   }
 }
