@@ -11,6 +11,7 @@
     rel="stylesheet" />
     <title>Fazer Login</title>
     <link rel="shortcut icon" href="/Satisfying.you/assets/smile.svg" type="image/x-icon" />
+    <script src="../scripts/scriptAutenticação.js"></script>
 </head>
 
 <body>
@@ -27,18 +28,18 @@
   <main class="main">
     <div class="mainContent">
       <h2 class="mainTitle">Fazer login</h2>
-      <form class="form">
+      <form class="form" action="Home.html">
         <label class="label">E-mail</label>
-        <input class="input" type="email" placeholder="Digite seu e-mail" />
+        <input id="emailInput" class="input" type="email" placeholder="Digite seu e-mail" />
         <label class="label">Senha</label>
-        <input class="input" type="password" placeholder="Digite sua senha" />
+        <input id="senhaInput" class="input" type="password" placeholder="Digite sua senha" />
         <div class="verification">
           <span class="spanEmailSenhaInvalidos">Email e/ou senha inválidos.</span>
           <span class="spanEsqueciMinhaSenha"><a href="RecuperarSenha.html">Esqueci minha senha</a></span>
         </div>
         <div class="create">
         <span class="criar_conta"><a href="NovaConta.html">Criar conta</a></span>
-        <button class="btn_entrar"><a href="Home.html">Entrar</a></button>
+        <button onclick="autenticar()" class="btn_entrar">Entrar</button>
         </div>
       </form>
 

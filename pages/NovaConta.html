@@ -35,15 +35,15 @@
     <main class="main">
         <div class="mainContent">
             <h2 class="mainTitle">Criar uma conta no Satisfying.you</h2>
-            <form class="form">
-              <label class="label">E-mail</label>
-              <input class="input" type="text" placeholder="Digite seu e-mail"/>
-              <label class="label">Senha</label>
-              <input class="input" type="password" placeholder="Digite sua senha"/>
-              <label class="label">Repetir Senha</label>
-              <input class="input" type="text" placeholder="Digite sua senha novamente"/>
-              <span class="spanSenhaNaoConfere">Senhas não Conferem</span>
-              <button class="btn_criar"><a href="Index.html">Criar</a></button>
+            <form class="form" action="../pages/Index.html">
+              <label id="labelEmail" class="label">E-mail</label>
+              <input id="emailInput" class="input" type="email" placeholder="Digite seu e-mail" required/>
+              <label id="labelSenha" class="label">Senha</label>
+              <input id="senhaInput" class="input" type="password" placeholder="Digite sua senha" required/>
+              <label id="labelRepetir" class="label">Repetir Senha</label>
+              <input id="repetirInput" class="input" type="password" placeholder="Digite sua senha novamente" required/>
+              <span id="senhaNaoConfere" class="spanSenhaNaoConfere">Senhas não Conferem</span>
+              <button onclick="cadastrar(event)" class="btn_criar">Criar</button>
             </form>
 
 
