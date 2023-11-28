@@ -30,6 +30,5 @@ function cadastrar() {
     // Armazena o array atualizado de usuários no Local Storage
     localStorage.setItem("usuarios", JSON.stringify(usuariosCadastrados));
 
-    alert("Cadastro realizado com sucesso!");
   }
 }

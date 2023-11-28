@@ -1,19 +1,36 @@
 window.onload = function() {
+    //=========Construindo cards========================
+    //pegando o local onde os cards serao montados
     var main = document.querySelectorAll(".scrollmenu")[0];
+    //pegando todas as pesquisas do local storage
     const storage = Array.from(JSON.parse(localStorage.getItem("pesquisaList")));
-    storage.map((item)=>{
+    //pegandop o usuartio logado
+    const userLogin =JSON.parse(localStorage.getItem('userLogin'))
+    //pegando as pesquisa somente do usuario
+    const minhasPesquisas = storage.map((pesquisa)=>{
+        if(pesquisa.userEmail === userLogin.email){
+            return  pesquisa
+        }
+        
+    })
+    //enviando para funçao qque cria o card e dando apeend (reenderizando) na tela home
+    minhasPesquisas.map((item)=>{
         main.appendChild(cretaCard(item.name,item.data,item.image));
     });
-
+    
+    //==================Funçao de pesquisa=====================
+    //pegando o elemento
     const searchBox = document.getElementById('SearchText')
-    searchBox.addEventListener('keyup',()=>{
+    searchBox.addEventListener('keyup',()=>{ // toda vez que um tecla e digitada
+        // pegando todos os cards pela class pesquisas_menu
         let listaPesquisasHTML = document.querySelectorAll('.pesquisas_menu');
-        
+        // transformando essa lista em array para pode trabalhhar melhor
         Array.from(listaPesquisasHTML).map((item)=>{
-            
+            //se o atributo nome que esta no card NAO conter a string que esta sendo digitada ele da um displai none pela class none 
             if(!item.getAttribute('name').toLocaleLowerCase().includes(searchBox.value.toLocaleLowerCase()) ){
                 item.classList.add('none')
             }else{
+                // caso contrario ele retira o display none
                 item.classList.remove('none')
             }
 
@@ -21,6 +38,11 @@ window.onload = function() {
     })
     
 };
+
+function sair(){
+    localStorage.removeItem('userLogin')
+    window.location.href = 'index.html'
+}
 
 function cretaCard(nome,data,img){
     // titulo

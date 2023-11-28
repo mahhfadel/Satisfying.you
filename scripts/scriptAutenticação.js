@@ -15,7 +15,8 @@ function autenticar() {
   // Verifica se o usuário foi encontrado
   if (usuarioAutenticado) {
     // Usuário autenticado com sucesso, realiza ação desejada (pode redirecionar para outra página, por exemplo)
-    alert("Login bem-sucedido!");
+
+    localStorage.setItem('userLogin', JSON.stringify(usuarioAutenticado))
   } else {
     event.preventDefault();
     emailSenhaErrado.style.visibility = "visible";
