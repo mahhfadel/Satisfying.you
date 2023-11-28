@@ -16,6 +16,7 @@ const inputFile = document.querySelector('#select-arquivo');
 let imgToSave=null;
 
 
+
 inputFile.addEventListener('change', function(e) { 
     const inputTarget = e.target;
     const file = inputTarget.files[0];
@@ -60,11 +61,17 @@ form.addEventListener('submit', function(e){
             } else{
                 e.preventDefault();
                 let pesquisaList = JSON.parse(localStorage.getItem('pesquisaList') || '[]')
-
+                let userLogin = JSON.parse(localStorage.getItem('userLogin'));
                 pesquisaList.push({
                     name: inputName.value,
                     data: inputData.value,
                     image: imgToSave,
+                    userEmail:userLogin.email,
+                    pessimo:0,
+                    ruim:0,
+                    neutro:0,
+                    bom :0,
+                    excelente:0,
                     // imageURL: img.src
                 })
             
