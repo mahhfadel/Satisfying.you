@@ -112,6 +112,7 @@ body {
     line-height: normal;
     font-size: 1.4em;
     align-self: self-end;
+    cursor: pointer;
   }
 
   .btn_salvar a{

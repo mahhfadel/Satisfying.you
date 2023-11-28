@@ -3,7 +3,7 @@
 //quadro imagem
 const pictureImage = document.querySelector(".picture__image");
 //epaço do nome da imagem
-const imputName = document.querySelector(".semArquivo");
+const imputNameImage = document.querySelector(".semArquivo");
 //formulario
 const form = document.querySelector('.form');
 //imput nome
@@ -19,12 +19,11 @@ let imgToSave=null;
 inputFile.addEventListener('change', function(e) { 
     const inputTarget = e.target;
     const file = inputTarget.files[0];
-    const name = inputTarget.files[0].name;
 
     if(file){
         const reader = new FileReader();
 
-        imputName.placeholder = name;
+        imputNameImage.placeholder = file.name;
 
         reader.addEventListener('load', function(e){
             const readerTarget = e.target;
@@ -66,6 +65,7 @@ form.addEventListener('submit', function(e){
                     name: inputName.value,
                     data: inputData.value,
                     image: imgToSave,
+                    // imageURL: img.src
                 })
             
                 localStorage.setItem('pesquisaList', JSON.stringify(pesquisaList))

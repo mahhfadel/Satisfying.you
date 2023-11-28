@@ -62,7 +62,7 @@ section {
 }
 
 
-section a{
+section a, .modificarPesquisa{
     border-radius: 1rem;
     background: #312464;
     width: 271px;
