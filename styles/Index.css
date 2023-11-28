@@ -22,7 +22,7 @@ body {
 
 .header {
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 1.5rem;
   justify-content: space-between;
 }
 
@@ -30,17 +30,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .mainContent {
-  width: 488px;
-  height: 455px;
-  flex-shrink: 0;
+  width: 50%;
   border-radius: 15px;
   border: 1px solid #737373;
   display: flex;
   align-items: center;
   justify-content: top;
   flex-direction: column;
+  padding-bottom: 1.5rem;
+  margin-top: 2rem;
 }
 .mainTitle {
   color: #fff;
@@ -49,8 +50,9 @@ body {
   font-weight: 400;
   line-height: normal;
   align-self: center;
-  margin-bottom: 47px;
-  margin-top: 35px;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 .label {
   color: #fff;
@@ -60,14 +62,15 @@ body {
   line-height: normal;
   align-self: flex-start;
   font-size: 1.2em;
+  margin-top: 0.2rem;
 }
 
 .input {
   outline: 0;
   box-shadow: 0 0 0 0;
   border: 0 none;
-  width: 424px;
-  height: 39px;
+  width: 100%;
+  height: 2.3rem;
   flex-shrink: 0;
   background: #fff;
   font-family: Averia Libre;
@@ -87,10 +90,12 @@ body {
 .verification{
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
 }
 .spanEmailSenhaInvalidos {
-  color: #ff0000;
+  color: #fd7979;
+  font-size: 14px;
   font-family: Averia Libre;
   font-style: normal;
   font-weight: 400;
@@ -100,6 +105,8 @@ body {
 }
 .spanEsqueciMinhaSenha {
   color: #3f92c5;
+  font-size: 14px;
+  text-align: right;
   font-family: Averia Libre;
   font-style: normal;
   font-weight: 400;
@@ -107,10 +114,11 @@ body {
   margin-bottom: 27px;
 }
 .create{
-  height: 18vh;
+  margin-top: 2rem;
+  width: 98%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 .criar_conta a{
   color: #3f92c5;
@@ -129,7 +137,7 @@ body {
     font-weight: 400;
     line-height: normal;
     font-size: 1.4em;
-
+    cursor: pointer;
 }
 .btn_entrar a{
   color: white;
@@ -141,4 +149,40 @@ a{
 .form{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+@media (max-width: 688px) {
+  .mainContent{
+    width: 70%;
+  }
+
+  .spanEmailSenhaInvalidos {
+    font-size: 12px;
+  }
+  .spanEsqueciMinhaSenha {
+    font-size: 12px;
+  }
+  .btn_entrar {
+    width: 134px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .title h1{
+    font-size: 2rem;
+  }
+  .mainContent{
+    width: 90%;
+  }
+  .spanEmailSenhaInvalidos {
+    font-size: 10px;
+  }
+  .spanEsqueciMinhaSenha {
+    font-size: 10px;
+  }
 }

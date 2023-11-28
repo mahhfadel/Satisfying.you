@@ -5,6 +5,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Satisfying.you/assets/smile.svg" type="image/x-icon" />
+    <title>Criar conta</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -13,7 +16,7 @@
   </head>
   <body >
     <header class="header">
-      <div class="title">
+      <a class="title" href="../pages/Index.html">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
@@ -27,7 +30,7 @@
           />
         </svg>
         <h1>Satisfying.you</h1>
-      </div>
+      </a>
     </header>
     <main class="main">
         <div class="mainContent">
@@ -38,7 +41,7 @@
               <label id="labelSenha" class="label">Senha</label>
               <input id="senhaInput" class="input" type="password" placeholder="Digite sua senha" required/>
               <label id="labelRepetir" class="label">Repetir Senha</label>
-              <input id="repetirInput" class="input" type="password" placeholder="Digite sua senha novamente" required/>
+              <input id="repetirInput" class="input" type="password" placeholder="Confirme sua senha" required/>
               <span id="senhaNaoConfere" class="spanSenhaNaoConfere">Senhas não Conferem</span>
               <button onclick="cadastrar(event)" class="btn_criar">Criar</button>
             </form>

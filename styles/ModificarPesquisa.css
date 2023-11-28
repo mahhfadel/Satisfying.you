@@ -39,10 +39,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   .mainContent {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
+    width: 60%;
     padding-bottom: 2rem;
     flex-shrink: 0;
     border-radius: 15px;
@@ -59,7 +61,8 @@ body {
     font-weight: 400;
     line-height: normal;
     align-self: center;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
   }
   .label {
     color: #fff;
@@ -74,7 +77,6 @@ body {
     outline: 0;
     box-shadow: 0 0 0 0;
     border: 0 none;
-    width: 424px;
     height: 30px;
     flex-shrink: 0;
     background: #fff;
@@ -130,22 +132,25 @@ body {
     background-color: #A4A4A4;
     color: white;
     height: 32px;
-    width: 130px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    /* padding-left: 0.4rem;
+    padding-right: 0.4rem; */
+    width: 30%;
   }
   .selecao{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .semArquivo{
     outline: 0;
     box-shadow: 0 0 0 0;
     border: 0 none;
-    width: 290px;
-    height: 30px;
+    width: 65%;
+    height: 32px;
     flex-shrink: 0;
     background: #fff;
     font-family: Averia Libre;
@@ -173,6 +178,8 @@ body {
   .form{
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
+    width: 90%;
   }
 
   .picture__image{
@@ -180,6 +187,7 @@ body {
     height: 8rem;
     margin-top: 0.1rem;
     background-color: #ffffff;
+    margin-top: 0.5rem;
   }
 
   .modalConfirm{
@@ -251,4 +259,44 @@ body {
     background: #3F92C5;
     padding: 0.8rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 700px) {
+    .mainContent{
+      width: 75%;
+    }
+
+    .semArquivo{
+      width: 63%;
+    }
+
+    .semArquivo::placeholder {
+      font-size: 1rem;
+    }
+    .escolher{
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+      font-size: 0.8rem;
+    }
+    .buttonSalvar{
+      margin-top: 1rem;
+    }
+
+  }
+  
+  
+  @media (max-width: 450px) {
+    .title h1{
+      font-size: 1.3rem;
+      margin-left: 0.2rem;
+    }
+    .mainContent{
+      width: 95%;
+    }
+    .semArquivo::placeholder {
+      font-size: 0.8rem;
+    }
+    .escolher{
+      text-align: center;
+    }
   }
