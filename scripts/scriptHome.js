@@ -44,7 +44,6 @@ function sair(){
     window.location.href = 'index.html'
 }
 
-
 function cretaCard(nome,data,img){
     // titulo
     const CardTitle = document.createElement('h2');
