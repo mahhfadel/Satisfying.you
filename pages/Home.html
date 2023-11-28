@@ -81,6 +81,7 @@
       if( window.innerWidth>677){
         cards.forEach(function (ele) {
         ele.style.cssText = "translate:" + (e.pageX - dragOfX) + "px;";
+        
       });
       }
       
@@ -95,5 +96,12 @@
 
     /* adiciona o evento que começa o drag */
     dragMe.addEventListener("mousedown", dragStart);
+
+    // Tela recarregar sempre que o tamanho da tela for entre 675 e 677
+    window.onresize = function () {
+      if(window.innerWidth<=677 && window.innerWidth>=675){
+        location.reload();
+      }
+    };
   
 </script>

@@ -172,14 +172,15 @@ body {
   .card{
     width: 100%;
   }
-}
-
-@media (max-width: 677px){
   .cardTitle{
     font-size: 1.5rem;
     margin-bottom: 0.01rem;
   }
+  .input{
+    margin-bottom: 2rem;
+  }
 }
+
 
 @media (max-width: 380px){
   .cardTitle{
